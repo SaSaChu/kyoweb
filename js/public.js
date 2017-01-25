@@ -18,6 +18,9 @@ $(function () {
   $('#banner_down').click (function () {
     $("html, body").stop ().animate ({ scrollTop: $(window).height () }, 1000);
   });
+  $('#top').click (function () {
+    $("html, body").stop ().animate ({ scrollTop: 0 }, 1000);
+  })
 
   var $menu = $('#menu');
   if ($menu.width () == 250) {
