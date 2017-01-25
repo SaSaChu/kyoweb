@@ -951,7 +951,10 @@ $tablet: 720px;
   
   .container {
     @include clearfix();
-    
+    div {
+      float: left;
+      
+    }
     span {
       float: left;
       display: inline-block;
