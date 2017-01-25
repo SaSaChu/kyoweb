@@ -18,9 +18,16 @@ $(function () {
   $('#banner_down').click (function () {
     $("html, body").stop ().animate ({ scrollTop: $(window).height () }, 1000);
   });
-  $('#top').click (function () {
+  var $top = $('#top');
+  $top.click (function () {
     $("html, body").stop ().animate ({ scrollTop: 0 }, 1000);
   })
+  $(document).scroll (function () {
+    var y = $(this).scrollTop ();
+    
+    if (y > 300) $top.fadeIn ();
+    else $top.fadeOut ();
+  });
 
   var $menu = $('#menu');
   if ($menu.width () == 250) {
@@ -82,9 +89,5 @@ $(function () {
       $tagsB.filter (':last-child').attr ('class', 'icon-keyboard_arrow_right');
       $tagsA.eq (c + i).addClass ('hide');
     }
-    //   $tags.attr ('data-i', parseInt ($tags.attr ('data-i'), 10) - 1 < 0 ? 0 : parseInt ($tags.attr ('data-i'), 10) - 1);
-    
-    //   $tags.attr ('data-i', parseInt ($tags.attr ('data-i'), 10) + 1 > $tagsA.length ? $tagsA.length : parseInt ($tags.attr ('data-i'), 10) + 1);
-
   });
 });
