@@ -18,7 +18,7 @@
   @include font-smoothing(antialiased);
 }
 
-@include font-face("dfnmingxbold-b5regular", font-files("dft_m9/dft_m9-webfont.eot", "dft_m9/dft_m9-webfont.ttf", "dft_m9/dft_m9-webfont.woff"));
+@include font-face("dfnmingxbold-b5regular", font-files("dft_m9/dft_m9-webfont.otf", "dft_m9/dft_m9-webfont.eot", "dft_m9/dft_m9-webfont.svg", "dft_m9/dft_m9-webfont.ttf", "dft_m9/dft_m9-webfont.woff"));
 
 .dftm9 {
   font-family: 'dfnmingxbold-b5regular' !important;
@@ -455,7 +455,7 @@ $tablet: 720px;
           position: relative;
           display: inline-block;
           width: 100%;
-          padding: 10px 5px;
+          padding: 10px;
           text-align: left;
           font-size: 16px;
           color: rgba(152, 156, 159, 1.00);
@@ -967,12 +967,13 @@ $tablet: 720px;
       a {
         float: left;
         display: inline-block;
+        font-size: 14px;
         text-decoration: none;
         color: rgba(173, 174, 175, 1.00);
         @include transition(color .3s);
         
         &:hover {
-          color: rgba(138, 143, 161, 1.00);
+          color: rgba(123, 130, 158, 1.00);
           &:before {
             color: rgba(173, 174, 175, 1.00);
           }
@@ -996,7 +997,7 @@ $tablet: 720px;
       width: 50%;
       float: left;
       text-align: right;
-      font-size: 12px;
+      font-size: 13px;
       margin-top: 2px;
       color: rgba(172, 173, 174, 1.00);
     }
@@ -1026,6 +1027,7 @@ $tablet: 720px;
       }
       img {
         max-width: 100%;
+        padding: 10px 0;
       }
     }
   }
