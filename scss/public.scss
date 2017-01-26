@@ -1019,6 +1019,9 @@ $tablet: 720px;
       a {
         color: rgba(97, 173, 151, 1.00);
       }
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
