@@ -266,8 +266,10 @@ $tablet: 720px;
     }
     header {
       font-size: 22px;
-      margin-top: 3px;
       font-weight: bold;
+      padding: 0;
+      height: 30px;
+      line-height: 30px;
 
       a {
         color: rgba(67, 71, 83, 1.00);
@@ -276,8 +278,8 @@ $tablet: 720px;
     }
     p {
       margin: 0;
-      margin-top: 5px;
       font-size: 15px;
+      line-height: 21px;
     }
   }
   @media screen and (min-width: 0) and (max-width: #{$tablet}) {
@@ -632,12 +634,12 @@ $tablet: 720px;
   @media screen and (min-width: 0) and (max-width: #{$tablet}) {
     display: none;
   }
-  @for $i from 1 through 100 {
+  @for $i from 1 through 10 {
     &[data-i="#{$i}"] {
       .container {
         > div {
           a {
-            @for $j from 1 through 100 {
+            @for $j from 1 through 10 {
               &:nth-child(#{$j}) {
                 left: ($j - $i - 1) * (100px + 10px);
               }
@@ -712,7 +714,7 @@ $tablet: 720px;
       float: left;
       display: inline-block;
       width: calc(100% - 30px * 2 - 10px * 2);
-      height: 25px;
+      height: 30px;
       margin: 0 10px;
       @include overflow-docx3();
 
@@ -833,6 +835,7 @@ $tablet: 720px;
 
           a {
             display: inline-block;
+            line-height: 24px;
 
             text-decoration: none;
             color: rgba(46, 54, 61, 1.00);
@@ -847,7 +850,7 @@ $tablet: 720px;
           display: inline-block;
           width: 100%;
           margin: 0;
-          margin-top: 15px;
+          margin-top: 10px;
           font-size: 14px;
           letter-spacing: 1.5px;
           line-height: 21px;
